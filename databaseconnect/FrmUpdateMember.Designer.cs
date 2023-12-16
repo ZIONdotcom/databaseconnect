@@ -166,6 +166,8 @@
             sid2.Name = "sid2";
             sid2.Size = new Size(190, 23);
             sid2.TabIndex = 14;
+            sid2.SelectedIndexChanged += sid2_SelectedIndexChanged;
+            sid2.SelectionChangeCommitted += sid2_SelectionChangeCommitted;
             // 
             // confirmbtn
             // 
@@ -175,6 +177,7 @@
             confirmbtn.TabIndex = 15;
             confirmbtn.Text = "Confirm";
             confirmbtn.UseVisualStyleBackColor = true;
+            confirmbtn.Click += confirmbtn_Click;
             // 
             // FrmUpdateMember
             // 
@@ -198,6 +201,7 @@
             Controls.Add(fn2);
             Name = "FrmUpdateMember";
             Text = "FrmUpdateMember";
+            Load += FrmUpdateMember_Load;
             ResumeLayout(false);
             PerformLayout();
         }
