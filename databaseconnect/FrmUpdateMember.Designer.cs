@@ -48,6 +48,7 @@
             // gender2
             // 
             gender2.FormattingEnabled = true;
+            gender2.Items.AddRange(new object[] { "FEMALE", "MALE" });
             gender2.Location = new Point(56, 306);
             gender2.Name = "gender2";
             gender2.Size = new Size(190, 23);
@@ -106,6 +107,7 @@
             // prog2
             // 
             prog2.FormattingEnabled = true;
+            prog2.Items.AddRange(new object[] { "BSIT", "BSCS" });
             prog2.Location = new Point(55, 352);
             prog2.Name = "prog2";
             prog2.Size = new Size(190, 23);
@@ -171,18 +173,20 @@
             // 
             // confirmbtn
             // 
+            confirmbtn.BackColor = SystemColors.ButtonShadow;
             confirmbtn.Location = new Point(99, 393);
             confirmbtn.Name = "confirmbtn";
             confirmbtn.Size = new Size(92, 23);
             confirmbtn.TabIndex = 15;
             confirmbtn.Text = "Confirm";
-            confirmbtn.UseVisualStyleBackColor = true;
+            confirmbtn.UseVisualStyleBackColor = false;
             confirmbtn.Click += confirmbtn_Click;
             // 
             // FrmUpdateMember
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(319, 450);
             Controls.Add(confirmbtn);
             Controls.Add(sid2);

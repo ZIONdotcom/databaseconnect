@@ -87,7 +87,7 @@ namespace databaseconnect
         private void confirmbtn_Click(object sender, EventArgs e)
         {
             //long StudentID, string FirstName, string MiddleName, string LastName, int Age, string Gender, string Program
-            clugRegistrationQuery.updateStudent(int.Parse(sid2.Text), fn2.Text, mn2.Text,ln2.Text,int.Parse(a2.Text),gender2.Text,prog2.Text);
+            clugRegistrationQuery.updateStudent(int.Parse(sid2.Text), fn2.Text, mn2.Text, ln2.Text, int.Parse(a2.Text), gender2.Text, prog2.Text);
             MessageBox.Show("Succesfully Updated!");
         }
     }

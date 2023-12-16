@@ -187,31 +187,34 @@
             // 
             // regbtn
             // 
+            regbtn.BackColor = SystemColors.ButtonShadow;
             regbtn.Location = new Point(513, 15);
             regbtn.Name = "regbtn";
             regbtn.Size = new Size(82, 29);
             regbtn.TabIndex = 15;
             regbtn.Text = "Register";
-            regbtn.UseVisualStyleBackColor = true;
+            regbtn.UseVisualStyleBackColor = false;
             regbtn.Click += regbtn_Click;
             // 
             // updatebtn
             // 
+            updatebtn.BackColor = SystemColors.ButtonShadow;
             updatebtn.Location = new Point(513, 50);
             updatebtn.Name = "updatebtn";
             updatebtn.Size = new Size(82, 29);
             updatebtn.TabIndex = 16;
             updatebtn.Text = "Update";
-            updatebtn.UseVisualStyleBackColor = true;
+            updatebtn.UseVisualStyleBackColor = false;
             // 
             // refreshbtn
             // 
+            refreshbtn.BackColor = SystemColors.ButtonShadow;
             refreshbtn.Location = new Point(513, 232);
             refreshbtn.Name = "refreshbtn";
             refreshbtn.Size = new Size(82, 29);
             refreshbtn.TabIndex = 17;
             refreshbtn.Text = "Refresh";
-            refreshbtn.UseVisualStyleBackColor = true;
+            refreshbtn.UseVisualStyleBackColor = false;
             refreshbtn.Click += refreshbtn_Click;
             // 
             // groupBox1
@@ -250,6 +253,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(607, 422);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
