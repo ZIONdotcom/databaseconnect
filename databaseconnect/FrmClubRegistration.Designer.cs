@@ -205,6 +205,7 @@
             updatebtn.TabIndex = 16;
             updatebtn.Text = "Update";
             updatebtn.UseVisualStyleBackColor = false;
+            updatebtn.Click += updatebtn_Click;
             // 
             // refreshbtn
             // 

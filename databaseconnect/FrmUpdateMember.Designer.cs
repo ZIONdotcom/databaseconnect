@@ -170,6 +170,8 @@
             sid2.TabIndex = 14;
             sid2.SelectedIndexChanged += sid2_SelectedIndexChanged;
             sid2.SelectionChangeCommitted += sid2_SelectionChangeCommitted;
+            sid2.TextUpdate += sid2_TextUpdate;
+            sid2.TextChanged += sid2_TextChanged;
             // 
             // confirmbtn
             // 

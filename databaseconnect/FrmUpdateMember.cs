@@ -37,13 +37,14 @@ namespace databaseconnect
         private void sid2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-
+            displayStudent();
             //long studentID, string FirstName, string MiddleName, string LastName, int Age, string Gender, string Program
 
         }
 
         private void FrmUpdateMember_Load(object sender, EventArgs e)
         {
+
             loadSidoncmb();
 
         }
@@ -59,29 +60,34 @@ namespace databaseconnect
         }
         public bool displayStudent()
         {
-            sqlConnection.Open();
-            sqlCommand = new SqlCommand("SELECT FirstName, MiddleName, LastName, Age, Gender, Program FROM ClubMembers WHERE StudentID = '" + sid2.Text + "'", sqlConnection);
-
-            SqlDataReader reader = sqlCommand.ExecuteReader();
-            while (reader.Read())
+            if(sid2 != null) 
             {
-                fn2.Text = reader.GetValue(0).ToString();
-                mn2.Text = reader.GetValue(1).ToString();
-                ln2.Text = reader.GetValue(2).ToString();
-                a2.Text = reader.GetValue(3).ToString();
-                gender2.Text = reader.GetValue(4).ToString();
-                prog2.Text = reader.GetValue(5).ToString();
-            }
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand("SELECT FirstName, MiddleName, LastName, Age, Gender, Program FROM ClubMembers WHERE CAST(StudentID AS VARCHAR) = '" + sid2.Text + "'", sqlConnection);
 
-            // sqlCommand.ExecuteNonQuery();
-            sqlConnection.Close();
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    fn2.Text = reader.GetValue(0).ToString();
+                    mn2.Text = reader.GetValue(1).ToString();
+                    ln2.Text = reader.GetValue(2).ToString();
+                    a2.Text = reader.GetValue(3).ToString();
+                    gender2.Text = reader.GetValue(4).ToString();
+                    prog2.Text = reader.GetValue(5).ToString();
+                  
+                }
+
+                // sqlCommand.ExecuteNonQuery();
+                sqlConnection.Close();
+            }
+           
 
             return true;
         }
 
         private void sid2_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            displayStudent();
+
         }
 
         private void confirmbtn_Click(object sender, EventArgs e)
@@ -89,6 +95,16 @@ namespace databaseconnect
             //long StudentID, string FirstName, string MiddleName, string LastName, int Age, string Gender, string Program
             clugRegistrationQuery.updateStudent(int.Parse(sid2.Text), fn2.Text, mn2.Text, ln2.Text, int.Parse(a2.Text), gender2.Text, prog2.Text);
             MessageBox.Show("Succesfully Updated!");
+        }
+
+        private void sid2_TextUpdate(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sid2_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

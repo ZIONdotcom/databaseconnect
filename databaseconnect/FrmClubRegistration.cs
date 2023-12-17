@@ -49,5 +49,11 @@ namespace databaseconnect
         {
             RefreshListOfClubMembers();
         }
+
+        private void updatebtn_Click(object sender, EventArgs e)
+        {
+            FrmUpdateMember frm = new FrmUpdateMember();    
+            frm.ShowDialog();
+        }
     }
 }
